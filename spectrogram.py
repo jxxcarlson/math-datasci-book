@@ -61,3 +61,28 @@ if __name__ == "__main__":
     mp3_file_path = '../data/eastern_birds/02 Mourning Dove Song.mp3'
     process_display_and_play_mp3(mp3_file_path)
     
+
+
+# To recap, the key elements that made this work are:
+#
+# 1.  Using a separate thread for audio playback, which allows 
+#     the program to continue running and display the spectrogram 
+#     while the audio plays.
+# 2. Implementing a loop that keeps the program active and updates the plot while 
+#    the audio is playing.
+# 3. Using matplotlib's interactive mode (plt.ion()) to keep the plot responsive.
+# 4. Properly handling the transition from interactive mode to blocking mode after 
+#    the audio finishes, ensuring the plot stays open until manually closed.
+#
+# This approach provides a good balance between functionality and user experience. 
+# You can now visually analyze the spectrogram of the birdsong while simultaneously 
+# listening to it, which can be very useful for bird vocalization studies 
+# or audio analysis in general.
+# If you want to extend this further, you could consider:
+# 1. Adding controls to pause/resume the audio playback.
+# 2. Implementing a feature to highlight the current position in the spectrogram
+#    as the audio plays.
+# 3. Adding functionality to load and analyze multiple audio files in sequence.
+
+# Feel free to ask if you have any questions about the code or if you'd like 
+# to explore any additional features or improvements!
